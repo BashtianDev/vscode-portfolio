@@ -14,7 +14,7 @@ export default function HomePage() {
       type: 'variable',
     },
     { code: '  const developerInfo = {', type: 'variable' },
-    { code: "    name: 'Nitin Ranganath',", type: 'array-item' },
+    { code: "    name: 'Alejandro Calvo',", type: 'array-item' },
     { code: "    role: 'Full Stack Developer',", type: 'array-item' },
     { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
