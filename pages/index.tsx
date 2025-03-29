@@ -15,8 +15,8 @@ export default function HomePage() {
     },
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Alejandro Calvo',", type: 'array-item' },
-    { code: "    role: 'Full Stack Developer',", type: 'array-item' },
-    { code: "    bio: 'Building modern web experiences'", type: 'array-item' },
+    { code: "    role: 'Full-Stack Developer & IT Administrator',", type: 'array-item' },
+    { code: "    bio: 'Apasionado por la tecnología y el software libre'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
@@ -33,7 +33,7 @@ export default function HomePage() {
     { code: '      <p>{developerInfo.role}</p>', type: 'object-method' },
     { code: '      <div className="cta">', type: 'object-method' },
     {
-      code: '        <Link href="/projects">View Projects</Link>',
+      code: '        <Link href="/projects">Ver proyectos</Link>',
       type: 'object-method',
     },
     { code: '      </div>', type: 'object-method' },
@@ -91,19 +91,18 @@ export default function HomePage() {
 
         <div className={styles.infoSection}>
           <h1 className={styles.developerName}>
-            Nitin <span className={styles.accentText}>Ranganath</span>
+            Alejandro <span className={styles.accentText}>Calvo</span>
           </h1>
 
-          <div className={styles.developerRole}>Full Stack Web Developer</div>
+          <div className={styles.developerRole}>Full-Stack Developer & IT Administrator</div>
 
           <p className={styles.bio}>
-            I build elegant, responsive web applications with modern
-            technologies. Focused on clean code and intuitive user experiences.
+          Apasionado por la tecnología, la innovación y la ciberseguridad. Entusiasta de la electrónica, el software libre y el desarrollo de soluciones creativas.
           </p>
 
           <div className={styles.actionLinks}>
             <Link href="/projects" className={styles.primaryLink}>
-              View Projects <VscArrowRight />
+              Ver proyectos <VscArrowRight />
             </Link>
           </div>
         </div>

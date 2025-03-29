@@ -14,7 +14,7 @@ const Bottombar = () => {
     <footer className={styles.bottomBar}>
       <div className={styles.container}>
         <a
-          href="https://github.com/itsnitinr/vscode-portfolio"
+          href="https://github.com/BashtianDev/vscode-portfolio"
           target="_blank"
           rel="noreferrer noopener"
           className={styles.section}
@@ -32,11 +32,25 @@ const Bottombar = () => {
       <div className={styles.container}>
         <div className={styles.section}>
           <SiNextdotjs className={styles.icon} />
-          <p>Powered by Next.js</p>
+          <a
+            href="https://nextjs.org/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={styles.section}
+          >
+            <p>Powered by Next.js</p>
+          </a>
         </div>
         <div className={styles.section}>
           <VscCheck className={styles.icon} />
-          <p>Prettier</p>
+          <a
+            href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={styles.section}
+          >
+            <p>Prettier</p>
+          </a>
         </div>
         <div className={styles.section}>
           <VscBell />

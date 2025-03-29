@@ -8,35 +8,27 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Driwwwle',
-    description:
-      'Discover creative websites and developers. A portal for you to share your projects.',
-    logo: '/logos/driwwwle.svg',
-    link: 'https://github.com/itsnitinr/driwwwle',
-    slug: 'driwwwle',
-  },
-  {
     title: 'VSCode Portfolio',
     description:
-      'A Visual Studio Code themed developer portfolio built with Next.js and CSS Modules.',
+      'Mi propio portfolio web (fork de itsnitinr) con tecnología serverless en Next.js y CSS.',
     logo: '/logos/vsc.svg',
-    link: 'https://github.com/itsnitinr/vscode-portfolio',
+    link: 'https://github.com/BashtianDev/vscode-portfolio',
     slug: 'vscode-portfolio',
+  }, 
+  {
+    title: 'Proyecto Espejo',
+    description:
+      'Espejo inteligente con Raspberry Pi con obtención de datos metereológicos y marítimos orientados a la pesca desde costa',
+    logo: '/logos/raspberry_pi.svg',
+    link: 'https://github.com/BashtianDev/proyecto-espejo',
+    slug: 'proyecto-espejo',
   },
   {
-    title: 'Subtrackt',
+    title: 'email-worker',
     description:
-      'A simple and elegant way to track your subscriptions and save money.',
-    logo: '/logos/subtrackt.svg',
-    link: 'https://github.com/itsnitinr/subtrackt',
-    slug: 'subtrackt',
-  },
-  {
-    title: 'Coolify Deployments',
-    description:
-      'VSCode extension to track and deploy your Coolify applications.',
-    logo: '/logos/coolify.svg',
-    link: 'https://github.com/itsnitinr/coolify-vscode-extension',
-    slug: 'coolify-vscode-extension',
+      'Un worker en JavaScript para realizar envíos de correos a través del servicio de Resend.com usando un endpoint JSON estándar.',
+    logo: '/logos/js_icon.svg',
+    link: 'https://github.com/BashtianDev/email-worker',
+    slug: 'email-worker',
   },
 ];
