@@ -1,6 +1,5 @@
 import {
   VscBell,
-  VscCheck,
   VscError,
   VscWarning,
   VscSourceControl,

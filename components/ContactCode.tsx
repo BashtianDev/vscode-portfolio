@@ -140,12 +140,14 @@ const ContactCode = () => {
             &nbsp;&nbsp;&nbsp;{status.message};
           </p>
         )}
+        <form onSubmit={handleSubmit}>
         <p className={styles.line}>
           <button type="submit" disabled={isLoading} className={styles.submitButton}>
             {isLoading ? 'Enviando...' : 'Enviar'}
           </button>
         </p>
         <p className={styles.line}>&#125;</p>
+        </form>
       </div>
       <div className={styles.socialLinks}>
         <p className={styles.line}>
