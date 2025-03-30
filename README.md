@@ -21,9 +21,11 @@ Para otras características y sugerencias de temas, por favor abre un issue.
 
 Crea un archivo `.env.local` dentro del directorio del proyecto para crear las variables de GITHUB (token y user).
 
-GITHUB_API_KEY = *insertar el token de github aquí*
+```bash
+GITHUB_API_KEY = *token GitHUB*
 NEXT_PUBLIC_GITHUB_USERNAME = *usuario GitHUB*
-WORKER_URL = *url de tu worker*
+WORKER_URL = *url del worker*
+```
 
 ## Ejecutar el servidor de desarrollo
 
