@@ -29,7 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       } else {
         return res.status(500).json({ success: false });
       }
-    } catch (err) {
+    } catch {
       return res.status(500).json({ success: false });
     }
   } else {
