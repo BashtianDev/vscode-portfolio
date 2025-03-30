@@ -27,7 +27,7 @@ const RepoCard = ({ repo }: RepoCardProps) => {
           </div>
         )}
       </div>
-      <p>{repo.description || 'No description provided'}</p>
+      <p>{repo.description || 'No hay descripción'}</p>
       <div className={styles.stats}>
         <div>
           <div>
@@ -48,7 +48,7 @@ const RepoCard = ({ repo }: RepoCardProps) => {
             href={repo.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            title="View Repository"
+            title="Ver Repositorio"
           >
             <VscGithubAlt className={styles.icon} />
           </a>
@@ -57,7 +57,7 @@ const RepoCard = ({ repo }: RepoCardProps) => {
               href={repo.homepage}
               target="_blank"
               rel="noopener noreferrer"
-              title="Visit Live Site"
+              title="Visitar el sitio en vivo"
             >
               <VscLinkExternal className={styles.icon} />
             </a>

@@ -4,8 +4,8 @@ const AboutPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Bashtian</h1>
-        <div className={styles.subtitle}>Tech Enthusiast & Maker</div>
+        <h1 className={styles.title}>Alejandro Calvo</h1>
+        <div className={styles.subtitle}><i>Tech Enthusiast & Maker</i></div>
 
         <div className={styles.aboutContent}>
           <section className={styles.section}>
@@ -32,7 +32,7 @@ const AboutPage = () => {
             <h2 className={styles.sectionTitle}>Proyectos</h2>
             <p className={styles.paragraph}>
               Actualmente estoy trabajando en varios proyectos, incluyendo un asistente de voz basado en Raspberry Pi, un espejo inteligente
-              para pescadores y un dispositivo con pantalla táctil para monitoreo de hardware en PC. Pronto los pondré a disposición de la comunidad.
+              y un dispositivo con pantalla táctil para monitoreo de hardware en PC. Pronto los pondré a disposición de la comunidad.
             </p>        
           </section>
 

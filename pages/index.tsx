@@ -15,13 +15,14 @@ export default function HomePage() {
     },
     { code: '  const developerInfo = {', type: 'variable' },
     { code: "    name: 'Alejandro Calvo',", type: 'array-item' },
-    { code: "    role: 'Full-Stack Developer & IT Administrator',", type: 'array-item' },
-    { code: "    bio: 'Apasionado por la tecnología y el software libre'", type: 'array-item' },
+    { code: "    role: 'Técnico en electrónica & Administrador IT',", type: 'array-item' },
+    { code: "    bio: 'Apasionado por la tecnología, la electrónica,", type: 'array-item' }, 
+    { code: "    el software libre y la ciberseguridad.'", type: 'array-item' },
     { code: '  };', type: 'array-end' },
     { code: '', type: 'blank' },
     { code: '  useEffect(() => {', type: 'nested-function' },
     {
-      code: '    document.title = `${developerInfo.name} | Portfolio`;',
+      code: '   document.title = `${developerInfo.name} | Portfolio`;',
       type: 'return',
     },
     { code: '    setIsLoaded(true);', type: 'function-call' },
@@ -94,7 +95,7 @@ export default function HomePage() {
             Alejandro <span className={styles.accentText}>Calvo</span>
           </h1>
 
-          <div className={styles.developerRole}>Full-Stack Developer & IT Administrator</div>
+          <div className={styles.developerRole}>Técnico en electrónica & Administrador IT</div>
 
           <p className={styles.bio}>
           Apasionado por la tecnología, la innovación y la ciberseguridad. Entusiasta de la electrónica, el software libre y el desarrollo de soluciones creativas.

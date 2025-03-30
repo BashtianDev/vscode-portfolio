@@ -18,9 +18,8 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
       <div className={styles.pageHeading}>
         <h1 className={styles.pageTitle}>GitHub</h1>
         <p className={styles.pageSubtitle}>
-          Browse through my GitHub repositories and see what I&apos;ve been
-          working on. These are some of my public repositories showcasing
-          various projects and skills.
+          Explora mi GitHub y descubre en qué he estado trabajando.
+          Aquí iré publicando algunos de mis repositorios que muestran varios proyectos y habilidades.
         </p>
       </div>
 
@@ -40,11 +39,11 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
               <div className={styles.stats}>
                 <div className={styles.statItem}>
                   <VscRepo className={styles.statIcon} />
-                  <span>{user.public_repos} repositories</span>
+                  <span>{user.public_repos} repositorios</span>
                 </div>
                 <div className={styles.statItem}>
                   <VscPerson className={styles.statIcon} />
-                  <span>{user.followers} followers</span>
+                  <span>{user.followers} seguidores</span>
                 </div>
               </div>
             </div>
@@ -52,7 +51,7 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
         </div>
 
         <div className={styles.sectionHeader}>
-          <h3 className={styles.sectionTitle}>Popular Repositories</h3>
+          <h3 className={styles.sectionTitle}>Repositorios públicos actualmente:</h3>
         </div>
         <div className={styles.reposContainer}>
           {repos.map((repo) => (
@@ -62,12 +61,24 @@ const GithubPage = ({ repos, user }: GithubPageProps) => {
         <div className={styles.contributions}>
           <GitHubCalendar
             username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
-            hideColorLegend
-            hideMonthLabels
+            hideColorLegend={false}
+            hideMonthLabels={false} // Asegúrate de que esto esté habilitado si quieres mostrar los meses
             colorScheme="dark"
             theme={{
               dark: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'],
               light: ['#161B22', '#0e4429', '#006d32', '#26a641', '#39d353'],
+            }}
+            labels={{
+              months: [
+                "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+                "Jul", "Aug", "Sep", "Oct", "Nov", "Dic"
+              ],
+              weekdays: ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"],
+              totalCount: "{{count}} commits en el último año",
+              legend: {
+                less: "Menos",
+                more: "Más"
+              }
             }}
             style={{
               width: '100%',

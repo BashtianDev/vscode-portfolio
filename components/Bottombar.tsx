@@ -4,6 +4,7 @@ import {
   VscError,
   VscWarning,
   VscSourceControl,
+  VscCopilot,
 } from 'react-icons/vsc';
 import { SiNextdotjs } from 'react-icons/si';
 
@@ -42,14 +43,14 @@ const Bottombar = () => {
           </a>
         </div>
         <div className={styles.section}>
-          <VscCheck className={styles.icon} />
+          <VscCopilot className={styles.icon} />
           <a
             href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
             target="_blank"
             rel="noreferrer noopener"
             className={styles.section}
           >
-            <p>Prettier</p>
+            <p>Copilot</p>
           </a>
         </div>
         <div className={styles.section}>

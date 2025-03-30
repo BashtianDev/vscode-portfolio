@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     title: 'Proyecto Espejo',
     description:
-      'Espejo inteligente con Raspberry Pi con obtención de datos metereológicos y marítimos orientados a la pesca desde costa',
+      'Espejo inteligente con Raspberry Pi con obtención de datos metereológicos y marítimos orientados a la pesca desde costa. (Repositorio privado).',
     logo: '/logos/raspberry_pi.svg',
     link: 'https://github.com/BashtianDev/proyecto-espejo',
     slug: 'proyecto-espejo',
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     title: 'email-worker',
     description:
-      'Un worker en JavaScript para realizar envíos de correos a través del servicio de Resend.com usando un endpoint JSON estándar.',
+      'Un worker para Cloudflare escrito en JavaScript para realizar envíos de correos a través del servicio de Resend.com usando un endpoint JSON estándar. (Repositorio privado).',
     logo: '/logos/js_icon.svg',
     link: 'https://github.com/BashtianDev/email-worker',
     slug: 'email-worker',

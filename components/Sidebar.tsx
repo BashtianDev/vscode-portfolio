@@ -8,15 +8,17 @@ import {
   VscCode,
   VscFiles,
   VscEdit,
+  VscHubot,
 } from 'react-icons/vsc';
 
 import styles from '@/styles/Sidebar.module.css';
 
 const sidebarTopItems = [
   { Icon: VscFiles, path: '/' },
+  { Icon: VscHubot , path: '/about' },
   { Icon: VscGithubAlt, path: '/github' },
   { Icon: VscCode, path: '/projects' },
-  { Icon: VscEdit, path: '/articles' },
+  { Icon: VscEdit, path: '/electronica' },
   { Icon: VscMail, path: '/contact' },
 ];
 

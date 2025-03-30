@@ -83,61 +83,71 @@ const ContactCode = () => {
 
   return (
     <div className={styles.codeContainer}>
-      <div className={styles.code}>
+      <div className={styles.contactForm}>
         <p className={styles.line}>
           <span className={styles.className}>.formulario_de_contacto</span> &#123;
         </p>
-        <form onSubmit={handleSubmit} className={styles.form}>
-          <div className={styles.formGroup}>
+        <div className={styles.formGrid}>
+          <p className={styles.line}>
+            <span className={styles.label}>&nbsp;&nbsp;&nbsp;nombre:&nbsp;</span>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              placeholder="Nombre"
+              placeholder="Tu nombre"
               required
-            />
-          </div>
-          <div className={styles.formGroup}>
+              className={styles.input}
+            />;
+          </p>
+          <p className={styles.line}>
+            <span className={styles.label}>&nbsp;&nbsp;&nbsp;email:&nbsp;</span>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Email"
+              placeholder="tu@email.com"
               required
-            />
-          </div>
-          <div className={styles.formGroup}>
+              className={styles.input}
+            />;
+          </p>
+          <p className={styles.line}>
+            <span className={styles.label}>&nbsp;&nbsp;&nbsp;asunto:&nbsp;</span>
             <input
               type="text"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
-              placeholder="Asunto"
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Mensaje"
-              required
-            />
-          </div>
+              placeholder="Asunto del mensaje"
+              className={styles.input}
+            />;
+          </p>
+        </div>
+        <p className={styles.line}>
+          &nbsp;&nbsp;&nbsp;mensaje: </p><p><textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Escribe tu mensaje aquí"
+            required
+            className={styles.textarea}
+          />
+        </p>
+        
+        {status.message && (
+          <p className={`${styles.line} ${styles.status} ${styles[status.type]}`}>
+            &nbsp;&nbsp;&nbsp;{status.message};
+          </p>
+        )}
+        <p className={styles.line}>
           <button type="submit" disabled={isLoading} className={styles.submitButton}>
             {isLoading ? 'Enviando...' : 'Enviar'}
           </button>
-          {status.message && (
-            <p className={`${styles.status} ${styles[status.type]}`}>
-              {status.message}
-            </p>
-          )}
-        </form>
+        </p>
         <p className={styles.line}>&#125;</p>
       </div>
-      <div className={styles.code}>
+      <div className={styles.socialLinks}>
         <p className={styles.line}>
           <span className={styles.className}>.redes_sociales</span> &#123;
         </p>

@@ -10,9 +10,7 @@ const ContactPage = () => {
         Siéntete libre de contactar conmigo para charlar sobre tu proyecto utilizando este formulario o cualquier otro medio mencionado a continuación.
       </p>
       <div className={styles.container}>
-        <div className={styles.contactContainer}>
-          <ContactCode />
-        </div>
+        <ContactCode />
       </div>
     </div>
   );
@@ -20,7 +18,7 @@ const ContactPage = () => {
 
 export async function getStaticProps() {
   return {
-    props: { title: 'Contact' },
+    props: { title: 'Contacto' },
   };
 }
 
