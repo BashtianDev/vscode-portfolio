@@ -53,6 +53,6 @@ Puedes consultar [el repositorio de Next.js en GitHub](https://github.com/vercel
 
 La forma más sencilla de desplegar tu aplicación Next.js es utilizando la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
 
-Básicamente sólo tendrás que añadir las variables de env.local antes de lanzar la implementación en Vercel para evitar los errores.
+Básicamente sólo tendrás que añadir las variables de env.local en Vercel de lanzar la implementación en Vercel para evitar los errores.
 
 Consulta nuestra [documentación de despliegue en Next.js](https://nextjs.org/docs/deployment) para más detalles.
