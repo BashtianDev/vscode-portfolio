@@ -61,18 +61,21 @@ const ContactCode = () => {
       const data = await response.json();
 
       if (response.ok) {
-        // Mensaje de éxito si la respuesta es correcta
         setStatus({ type: 'success', message: data.message || 'Mensaje enviado correctamente.' });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        // Mensaje de error si la respuesta no es correcta
         setStatus({ type: 'error', message: data.message || 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.' });
       }
-    } catch (error: any) {
-      // Captura el error del worker y muestra un mensaje específico
+    } catch (error: unknown) {
+      let errorMessage = 'Error inesperado al enviar el mensaje. Por favor, inténtalo más tarde.';
+      
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+
       setStatus({ 
         type: 'error', 
-        message: error?.message || 'Error inesperado al enviar el mensaje. Por favor, inténtalo más tarde.' 
+        message: errorMessage 
       });
     } finally {
       setIsLoading(false);
