@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     title: 'email-worker',
     description:
-      'Un worker para Cloudflare escrito en JavaScript para realizar envíos de correos a través del servicio de Resend.com usando un endpoint JSON estándar. (Repositorio privado).',
+      'Un worker para Cloudflare escrito en JavaScript para realizar envíos de correos a través del servicio de Resend.com usando un endpoint JSON estándar.',
     logo: '/logos/js_icon.svg',
     link: 'https://github.com/BashtianDev/email-worker',
     slug: 'email-worker',

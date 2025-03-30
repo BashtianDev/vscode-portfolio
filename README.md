@@ -1,49 +1,58 @@
-# vscode-portfolio
-[![Open is Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
+## vscode-portafolio
+[![Abrir en Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/itsnitinr/vscode-portfolio)
 
-A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
+Un sitio web de portafolio de desarrollador con temática de Visual Studio Code, construido con Next.js y desplegado en Vercel.
 
-![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
+![Banner de vscode-portafolio](https://imgur.com/JXJ9mpO.gif)
 
-## Features Roadmap
+## Hoja de ruta de características
 
-- [ ] Themes and customizations
-  - [x] GitHub Dark (default)
+- [ ] Temas y personalizaciones
+  - [x] GitHub Dark (predeterminado)
   - [ ] One Dark Pro
   - [x] Dracula
   - [x] Ayu
   - [x] Nord
-- [ ] Interactive custom terminal
+- [ ] Terminal interactiva personalizada
 
-For other features and themes suggestions, please open an issue.
+Para otras características y sugerencias de temas, por favor abre un issue.
 
-## Environment Variables
+## Variables de entorno
 
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
+Crea un archivo `.env.local` dentro del directorio del proyecto para crear las variables de GITHUB (token y user).
 
-## Running Development Server
+GITHUB_API_KEY = *insertar el token de github aquí*
+NEXT_PUBLIC_GITHUB_USERNAME = *usuario GitHUB*
+WORKER_URL = *url de tu worker*
+
+## Ejecutar el servidor de desarrollo
 
 ```bash
 npm run dev
-# or
+# o
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el resultado.
 
-All VSCode related components can be found in the `components` folder. To change the content of the portfolio, check out the `pages` folder. To add or remove pages, modify `components/Sidebar.jsx` and `components/Tabsbar.jsx`.
+Todos los componentes relacionados con VSCode se encuentran en la carpeta `components`. Para cambiar el contenido del portafolio, revisa la carpeta `pages`. Para agregar o eliminar páginas, modifica `components/Sidebar.jsx` y `components/Tabsbar.jsx`.
 
-## Next.js Resources
+El formulario de contacto utiliza un worker de Cloudflare hecho en java disponible en https://github.com/BashtianDev/email-worker. 
+¡Importante! Antes de usarlo modifica worker.js con tus valores de correo y origenes permitidos correctos.
 
-To learn more about Next.js, take a look at the following resources:
+## Recursos de Next.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para aprender más sobre Next.js, revisa los siguientes recursos:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
+- [Documentación de Next.js](https://nextjs.org/docs) - aprende sobre las características y API de Next.js.
+- [Aprender Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
 
-## Deploy on Vercel
+Puedes consultar [el repositorio de Next.js en GitHub](https://github.com/vercel/next.js/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Desplegar en Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+La forma más sencilla de desplegar tu aplicación Next.js es utilizando la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
+
+Básicamente sólo tendrás que añadir las variables de env.local antes de lanzar la implementación en Vercel para evitar los errores.
+
+Consulta nuestra [documentación de despliegue en Next.js](https://nextjs.org/docs/deployment) para más detalles.

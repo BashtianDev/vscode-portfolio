@@ -50,7 +50,8 @@ const ContactCode = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('https://email-worker.doctorbinario.workers.dev/', {
+      const worker = process.env.WORKER_URL ?? "https://example.com"; // Evita el error de variable vacía.
+      const response = await fetch(worker, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
