@@ -32,7 +32,6 @@ const contactItems = [
     link: '@Bashtian10',
     href: 'https://t.me/Bashtian10',
   },
-
 ];
 
 const ContactCode = () => {
@@ -62,13 +61,19 @@ const ContactCode = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus({ type: 'success', message: data.message });
+        // Mensaje de éxito si la respuesta es correcta
+        setStatus({ type: 'success', message: data.message || 'Mensaje enviado correctamente.' });
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
-        setStatus({ type: 'error', message: data.message });
+        // Mensaje de error si la respuesta no es correcta
+        setStatus({ type: 'error', message: data.message || 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.' });
       }
-    } catch (error) {
-      setStatus({ type: 'error', message: 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.' });
+    } catch (error: any) {
+      // Captura el error del worker y muestra un mensaje específico
+      setStatus({ 
+        type: 'error', 
+        message: error?.message || 'Error inesperado al enviar el mensaje. Por favor, inténtalo más tarde.' 
+      });
     } finally {
       setIsLoading(false);
     }
@@ -87,66 +92,66 @@ const ContactCode = () => {
         <p className={styles.line}>
           <span className={styles.className}>.formulario_de_contacto</span> &#123;
         </p>
-        <div className={styles.formGrid}>
-          <p className={styles.line}>
-            <span className={styles.label}>&nbsp;&nbsp;&nbsp;nombre:&nbsp;</span>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Tu nombre"
-              required
-              className={styles.input}
-            />;
-          </p>
-          <p className={styles.line}>
-            <span className={styles.label}>&nbsp;&nbsp;&nbsp;email:&nbsp;</span>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="tu@email.com"
-              required
-              className={styles.input}
-            />;
-          </p>
-          <p className={styles.line}>
-            <span className={styles.label}>&nbsp;&nbsp;&nbsp;asunto:&nbsp;</span>
-            <input
-              type="text"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              placeholder="Asunto del mensaje"
-              className={styles.input}
-            />;
-          </p>
-        </div>
-        <p className={styles.line}>
-          &nbsp;&nbsp;&nbsp;mensaje: </p><p><textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Escribe tu mensaje aquí"
-            required
-            className={styles.textarea}
-          />
-        </p>
-        
-        {status.message && (
-          <p className={`${styles.line} ${styles.status} ${styles[status.type]}`}>
-            &nbsp;&nbsp;&nbsp;{status.message};
-          </p>
-        )}
         <form onSubmit={handleSubmit}>
-        <p className={styles.line}>
-          <button type="submit" disabled={isLoading} className={styles.submitButton}>
-            {isLoading ? 'Enviando...' : 'Enviar'}
-          </button>
-        </p>
-        <p className={styles.line}>&#125;</p>
+          <div className={styles.formGrid}>
+            <p className={styles.line}>
+              <span className={styles.label}>&nbsp;&nbsp;&nbsp;nombre:&nbsp;</span>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Tu nombre"
+                required
+                className={styles.input}
+              />;
+            </p>
+            <p className={styles.line}>
+              <span className={styles.label}>&nbsp;&nbsp;&nbsp;email:&nbsp;</span>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="tu@email.com"
+                required
+                className={styles.input}
+              />;
+            </p>
+            <p className={styles.line}>
+              <span className={styles.label}>&nbsp;&nbsp;&nbsp;asunto:&nbsp;</span>
+              <input
+                type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                placeholder="Asunto del mensaje"
+                className={styles.input}
+              />;
+            </p>
+          </div>
+          <p className={styles.line}>
+            &nbsp;&nbsp;&nbsp;mensaje: </p><p><textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Escribe tu mensaje aquí"
+              required
+              className={styles.textarea}
+            />
+          </p>
+
+          {status.message && (
+            <p className={`${styles.line} ${styles.status} ${styles[status.type]}`}>
+              &nbsp;&nbsp;&nbsp;{status.message};
+            </p>
+          )}
+          <p className={styles.line}>
+            <button type="submit" disabled={isLoading} className={styles.submitButton}>
+              {isLoading ? 'Enviando...' : 'Enviar'}
+            </button>
+          </p>
+          <p className={styles.line}>&#125;</p>
         </form>
       </div>
       <div className={styles.socialLinks}>
