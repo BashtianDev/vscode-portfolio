@@ -50,7 +50,7 @@ const ContactCode = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const worker = process.env.WORKER_URL ?? "https://example.com"; // Evita el error de variable vacía.
+      const worker = process.env.NEXT_PUBLIC_WORKER_URL ?? "https://example.com"; // Evita el error de variable vacía.
       const response = await fetch(worker, {
         method: 'POST',
         headers: {

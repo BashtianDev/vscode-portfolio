@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/styles/ArticlesPage.module.css';
+import styles from '@/styles/ElectronicaPage.module.css';
 import { VscArrowRight } from 'react-icons/vsc'; // Asegúrate de instalar react-icons si no lo tienes
 
-const ArticlesPage = () => {
+const ElectronicaPage = () => {
   return (
     <div className={styles.layout}>
       {/* Título principal */}
@@ -37,4 +37,10 @@ const ArticlesPage = () => {
   );
 };
 
-export default ArticlesPage;
+export async function getStaticProps() {
+  return {
+    props: { title: 'Electrónica' },
+  };
+}
+
+export default ElectronicaPage;
