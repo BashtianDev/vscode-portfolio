@@ -1,5 +1,6 @@
 import styles from '@/styles/ContactCode.module.css';
 import { useState } from 'react';
+import { MdEmail } from 'react-icons/md';
 
 const contactItems = [
   {
@@ -50,8 +51,8 @@ const ContactCode = () => {
     setStatus({ type: '', message: '' });
 
     try {
-      const worker = process.env.WORKER_URL ?? "https://example.com"; // Evita el error de variable vacía.
-      const response = await fetch(worker, {
+
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
