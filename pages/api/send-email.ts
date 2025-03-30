@@ -3,7 +3,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 interface ResponseData {
-  error?: string;
   success?: boolean;
 }
 
@@ -12,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   // Verifica si la variable está definida
   if (!WORKER_URL) {
-    return res.status(500).json({ error: "WORKER_URL no está definida" });
+    return res.status(500).json({ success: false });
   }
 
   if (req.method === 'POST') {
@@ -28,12 +27,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       if (response.ok) {
         return res.status(200).json({ success: true });
       } else {
-        return res.status(500).json({ error: "Error al enviar el correo" });
+        return res.status(500).json({ success: false });
       }
-    } catch (error) {
-      return res.status(500).json({ error: "Hubo un error al intentar contactar con el Worker." });
+    } catch (err) {
+      return res.status(500).json({ success: false });
     }
   } else {
-    return res.status(405).json({ error: "Método no permitido" });
+    return res.status(405).json({ success: false });
   }
 }
