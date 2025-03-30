@@ -1,6 +1,5 @@
 import styles from '@/styles/ContactCode.module.css';
 import { useState } from 'react';
-import { MdEmail } from 'react-icons/md';
 
 const contactItems = [
   {

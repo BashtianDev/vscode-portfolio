@@ -1,3 +1,5 @@
+// pages/api/send-email.ts
+
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 interface ResponseData {
@@ -22,8 +24,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         },
         body: JSON.stringify(req.body), // Pasa los datos del formulario
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         return res.status(200).json({ success: true });
